@@ -225,7 +225,7 @@
             <p class="subtitle">輸入帳號和密碼進行登入</p>
         </div>
 
-        <form action="user_center.php" method="POST">
+        <form action="user_center cookie.php" method="POST">
             <div class="form-group">
                 <label for="username">帳號或信箱</label>
                 <input type="text" id="username" name="username" placeholder="請輸入帳號或信箱" required>

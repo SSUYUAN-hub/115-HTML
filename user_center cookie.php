@@ -1,12 +1,15 @@
 <?php
+if(!isset($_COOKIE['login'])){
 if(!($_POST['username']=='ssuyuan' && $_POST['password']=='1234')){
     echo "帳號或密碼輸入錯誤";
     echo "<br>";
-    echo "<a href='07-login.php'>返回登入</a>";
+    echo "<a href='08-login cookie.php'>返回登入</a>";
     echo exit();
 }
-
-
+}
+if(!isset($_COOKIE['login'])){
+setcookie('login','1',time()+240);
+}
     ?>
 
 
@@ -354,16 +357,17 @@ if(!($_POST['username']=='ssuyuan' && $_POST['password']=='1234')){
             <div class="sidebar">
                 <div class="profile-card">
                     <div class="profile-avatar">👤</div>
-                    <div class="profile-name">王小明</div>
+                    <div class="profile-name"><?php echo isset($_POST['username']) ? htmlspecialchars($_POST['username']) : "訪客"; ?></div>
                     <div class="profile-email">user@example.com</div>
                 </div>
 
                 <ul class="menu-list">
                     <li class="menu-item"><a href="#profile">📋 個人資料</a></li>
+                    <li class="menu-item"><a href="#level">📋 會員等級(<?= $_COOKIE['login']; ?>)</a></li>
                     <li class="menu-item"><a href="#account">🔐 帳戶設定</a></li>
                     <li class="menu-item"><a href="#history">📜 交易記錄</a></li>
                     <li class="menu-item"><a href="#settings">⚙️ 偏好設定</a></li>
-                    <li class="menu-item"><a href="07-login.php">🚪 登出</a></li>
+                    <li class="menu-item"><a href="08-login cookie.php">🚪 登出</a></li>
                 </ul>
             </div>
 
@@ -464,7 +468,7 @@ if(!($_POST['username']=='ssuyuan' && $_POST['password']=='1234')){
             </div>
         </div>
 
-        <a href="07-login.php" class="back-btn">← 返回登入頁</a>
+        <a href="08-login cookie.php" class="back-btn">← 返回登入頁</a>
     </div>
 </body>
 
