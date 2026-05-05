@@ -1,11 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>字串處理練習</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #a8d5ba;
+            padding-bottom: 1rem;
+            text-align: center;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            padding-left: 1rem;
+            border-left: 4px solid #aa96da;
+        }
+        p {
+            color: #555;
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+        pre {
+            background: #f0f3f7;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 4px solid #a8d5ba;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #a8d5ba 0%, #aa96da 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(168, 213, 186, 0.3);
+        }
+    </style>
 </head>
 <body>
+  <div class="container">
   <h1>字串處理練習</h1>
 <h2>字串取代</h2>
 <p>將”aaddw1123”改成”*********”</p>
@@ -47,8 +115,10 @@ echo $str;
 
 <ul>
   <ui>將” The reason why a great man is great is that he resolves to be a great man”只取前十字成為” The reason…”</ui>
-</ul>
-
+</ul>  </div>
+  <div class="container" style="margin-top: 1rem;">
+    <a href="index.php" class="back-btn">← 返回首頁</a>
+  </div>
 <?php
 $str="The reason why a great man is great is that he resolves to be a great man";
 $short=mb_substr($str,0,10);
@@ -103,9 +173,6 @@ foreach($keyword as $k){
 }
 $str=str_replace($keyword,$tmp,$str);
 echo $str;
-
-
-
 ?>
 <P>&nbsp;</P>
 <P>&nbsp;</P>
