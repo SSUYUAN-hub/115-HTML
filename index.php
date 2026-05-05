@@ -74,6 +74,7 @@
             <li class="nav-item"><a href="07-login.php">07. 會員登入</a></li>
             <li class="nav-item"><a href="08-login cookie.php">08. 登入檢查-cookie</a></li>
             <li class="nav-item"><a href="09-login session.php">09. 登入檢查-session</a></li>
+            <li class="nav-item"><a href="10-include.php">10. include應用</a></li>
         </ul>
     </div>
 </body>
